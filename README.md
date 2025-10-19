@@ -31,18 +31,18 @@ Se tiene como objetivo desarrollar un sistema para la *Gestion academica y admin
 - **Herramientas adicionales:** Postman, Figma
 
 ---
-## 👥 Colaboradores
+## 👥Colaboradores
 
-|Nombre|Rol|
+|Nombre|Responsabilidad|Rol|
 |--------|-----------|
-|Daniel Serrano Mora|Responsable del repositorio Github y documentación técnica|
-|Adrián Bolaños Umaña|Responsable del Backlog en Jira (épicas, historia de usuario y planificación de sprints)|
-|Daniel Serrano Mora|Responsable del repositorio Github y documentación técnica|
+|Daniel Serrano Mora|Responsable del repositorio Github y documentación técnica|**Project Manager**|
+|Adrián Bolaños Umaña|Responsable del Backlog en Jira (épicas, historia de usuario y planificación de sprints)| **Backend Developer y QA Tester**|
+|Daniel Serrano Mora|Responsable del seguimiento del proyecto y validación del backlog en Jira| **QA Tester** **y** **Frontend Developer:** |
 
 
 ---
 
-## 🌿 Estrategia de Branches y Commits
+## 🌿Estrategia de Branches y Commits
 
 - `main`: Rama principal estable.
 - `develop`: Rama de desarrollo.
@@ -52,7 +52,7 @@ Se tiene como objetivo desarrollar un sistema para la *Gestion academica y admin
 
 ---
 
-## 📅 Estado del proyecto
+## 📅Estado del proyecto
 
 Fase 1: Documentación inicial ✅  
 Fase 2: Diseño de arquitectura 🕒  
@@ -60,7 +60,7 @@ Fase 3: Desarrollo 💻
 
 ---
 
-## 📝 Tipos de Commits
+## 📝Tipos de Commits
 
 - `feat`: Nueva funcionalidad.
 - `fix`: Corrección de errores.
