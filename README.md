@@ -34,7 +34,7 @@ Se tiene como objetivo desarrollar un sistema para la *Gestion academica y admin
 ## 👥Colaboradores
 
 |Nombre|Responsabilidad|Rol|
-|--------|-----------|
+|--------|-----------|-----|
 |Daniel Serrano Mora|Responsable del repositorio Github y documentación técnica|**Project Manager**|
 |Adrián Bolaños Umaña|Responsable del Backlog en Jira (épicas, historia de usuario y planificación de sprints)| **Backend Developer y QA Tester**|
 |Daniel Serrano Mora|Responsable del seguimiento del proyecto y validación del backlog en Jira| **QA Tester** **y** **Frontend Developer:** |
