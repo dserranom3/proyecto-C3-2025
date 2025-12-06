@@ -1,4 +1,4 @@
-## Detalles que tuvimos al reunirnos con Centro Hellen Keller
+##📉 Detalles que tuvimos al reunirnos con Centro Hellen Keller
 
 |Punto a tratar|Discusion y decisiones|Notas y tareas de accion|
 |--------|-----------|-----|
