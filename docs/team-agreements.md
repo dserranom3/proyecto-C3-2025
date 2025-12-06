@@ -27,3 +27,14 @@
 - [ ] Se han agregado pruebas si aplica.
 - [ ] La documentación fue actualizada.
 - [ ] La funcionalidad está integrada sin errores.
+
+## 📝 Cumplimiento del Proyecto
+Todos los miembros del equipo se comprometen a cumplir con:
+- Fechas de entrega internas.
+- Calidad mínima definida.
+- Participación equitativa.
+
+## 📱 Reglas de Comunicación
+- Comunicación oficial por grupo de WhatsApp.
+- Respuesta estimada en un máximo de 6 horas.
+- Uso del canal de voz solo si hay un bloqueo o duda crítica.
