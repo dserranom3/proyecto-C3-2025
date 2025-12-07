@@ -32,7 +32,6 @@ window.verificarRol = function() {
 }
 
 function validar(){
-    // Validación simplificada
     if(inputNombre.value === "" || inputCorreo.value === "") return false;
     if(inputContrasenna.value !== inputConfirmacion.value) {
         alert("Contraseñas no coinciden");

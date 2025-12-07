@@ -2,7 +2,6 @@ const express = require('express');
 const Usuario = require('../models/usuario.model');
 const router = express.Router();
 
-// 1. REGISTRAR USUARIO (Actualizado)
 router.post('/registrar-usuario', async (req, res)=>{
     try{
         let nuevoUsuario = new Usuario({
@@ -10,7 +9,6 @@ router.post('/registrar-usuario', async (req, res)=>{
             correo : req.body.correo,
             contrasenna : req.body.contrasenna,
             rol : req.body.rol,
-            // Si viene el ID del estudiante, lo guardamos, sino null
             estudianteId: req.body.estudianteId || null 
         });
 
@@ -22,10 +20,8 @@ router.post('/registrar-usuario', async (req, res)=>{
     }
 });
 
-// 2. LISTAR USUARIOS (Actualizado con populate)
 router.get('/listar-usuarios' , async(req,res)=>{
     try{
-        // Populate nos permite ver el nombre del estudiante en lugar de solo su ID
         const usuarios = await Usuario.find().populate('estudianteId', 'nombre');
         res.json(usuarios);
     }catch(error){
@@ -33,7 +29,6 @@ router.get('/listar-usuarios' , async(req,res)=>{
     }
 });
 
-// LOGIN (Actualizado)
 router.post('/login', async (req, res) => {
     try {
         const { correo, contrasenna } = req.body;
@@ -50,7 +45,6 @@ router.post('/login', async (req, res) => {
             return res.status(401).json({ ok: false, msj: "Contraseña incorrecta" });
         }
 
-        // Devolvemos datos clave, incluyendo estudianteId
         const { _id, nombre, correo: mail, rol, estudianteId } = usuario;
         return res.json({ ok: true, usuario: { _id, nombre, correo: mail, rol, estudianteId } });
 
@@ -59,7 +53,6 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// 3. RECUPERAR CONTRASEÑA (Nueva ruta simulada)
 router.post('/recuperar-contrasenna', async (req, res) => {
     try {
         const { correo } = req.body;
@@ -68,14 +61,12 @@ router.post('/recuperar-contrasenna', async (req, res) => {
         if (!usuario) {
             return res.json({ ok: false, msj: "El correo no existe en el sistema." });
         }
-        // Simulación de éxito
         res.json({ ok: true, msj: `Instrucciones enviadas a ${correo}` });
     } catch (error) {
         res.json({ error });
     }
 });
 
-// Rutas auxiliares (buscar, actualizar, eliminar) se mantienen igual...
 router.get("/buscar-usuario/:correo",async(req,res)=>{
     try{
         let correo = req.params.correo;

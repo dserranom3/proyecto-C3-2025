@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>`;
   } else if(rol === "docente" || rol === "terapeuta") {
     main.innerHTML = `
-      <h2>${rol.toUpperCase()}: ${usuario.nombre}</h2>
+      <h2>${rol.toUpperCase()}: ${usuario.nombre}</h2>  
       <ul>
         <li><a href="pei.html">Ver PEI</a></li>
         <li><a href="progreso.html">Registrar Progreso</a></li>
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     main.innerHTML = `<h2>Bienvenido ${usuario.nombre}</h2>`;
   }
 
-  // Ocultar links del menú header según rol
   if(rol !== "admin") document.getElementById("linkProgramas").style.display = "none";
   if(!(rol === "admin" || rol === "docente" || rol === "terapeuta")) document.getElementById("linkPEI").style.display = "none";
   if(rol !== "encargado") document.getElementById("linkEncargado").style.display = "none";
