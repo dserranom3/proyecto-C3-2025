@@ -81,9 +81,7 @@ Fase 3: Desarrollo 💻
 - En el navegador entramos al [localhost](http://localhost:3000/login.html) para comenzar a interactuar con el proyecto
  
 
- ## Descripcion del proyecto
 
- Este proyecto fue ejecuta para optimizar y centralizar los procesos academicos y los procesos administrativos de la institucio. El sistema facilita la creacion y el seguimiento de los encargados en los Planes Educativos Individualizados(PEI), ademas del registro y la relacion entre encargado y estudiante.
 
 
 
