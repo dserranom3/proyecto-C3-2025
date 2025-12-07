@@ -19,6 +19,7 @@ Se tiene como objetivo desarrollar un sistema para la *Gestion academica y admin
 5. [Branches](#Estrategia-de-Branches-y-Commits)
 6. [Estados](#Estado-del-proyecto)
 7. [Comits](#Tipos-de-Commits)
+8. [Descripcion del proyecto](#Descripcion-del-proyecto)
 
 
 ---
@@ -69,5 +70,20 @@ Fase 3: Desarrollo 💻
 - `refactor`: Reorganización del código sin cambiar funcionalidad.
 - `test`: Cambios en pruebas.
 - `chore`: Tareas de mantenimiento.
+
+## 💻instalacion y activacion
+
+-Descargar la carpeta back-end(ya posee la carpeta front-end)
+-Descargar el package.json para las librerias necesarias
+-En la terminal colocamos el comando "cd back-end" para entrar a la carpeta back-end
+-En la terminal colocamos el comando "npm install" para instalar todas las librerias
+-En la terminal encendemos el servidor con el comando "node server.js"
+-En el navegador entramos al [localhost](http://localhost:3000/login.html) para comenzar a interactuar con el proyecto
+ 
+
+ ## Descripcion del proyecto
+
+ Este proyecto fue ejecuta para optimizar y centralizar los procesos academicos y los procesos administrativos de la institucio. El sistema facilita la creacion y el seguimiento de los encargados en los Planes Educativos Individualizados(PEI), ademas del registro y la relacion entre encargado y estudiante.
+
 
 
