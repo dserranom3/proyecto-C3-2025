@@ -73,12 +73,12 @@ Fase 3: Desarrollo 💻
 
 ## 💻instalacion y activacion
 
--Descargar la carpeta back-end(ya posee la carpeta front-end)
--Descargar el package.json para las librerias necesarias
--En la terminal colocamos el comando "cd back-end" para entrar a la carpeta back-end
--En la terminal colocamos el comando "npm install" para instalar todas las librerias
--En la terminal encendemos el servidor con el comando "node server.js"
--En el navegador entramos al [localhost](http://localhost:3000/login.html) para comenzar a interactuar con el proyecto
+- Descargar la carpeta back-end(ya posee la carpeta front-end)
+- Descargar el package.json para las librerias necesarias
+- En la terminal colocamos el comando "cd back-end" para entrar a la carpeta back-end
+- En la terminal colocamos el comando "npm install" para instalar todas las librerias
+- En la terminal encendemos el servidor con el comando "node server.js"
+- En el navegador entramos al [localhost](http://localhost:3000/login.html) para comenzar a interactuar con el proyecto
  
 
  ## Descripcion del proyecto
