@@ -1,56 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css"> <title>Registro de Usuarios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro de Usuarios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <header>
-        <h1>Registro de Usuarios</h1>
-        <a href="dashboard.html">Volver al Dashboard</a>
-    </header>
-
-    <form>
-        <div>
-            <label for="txtNombre">Nombre completo</label>
-            <input type="text" id="txtNombre" required>
-        </div>
-        <div>
-            <label for="txtCorreo">Correo electrónico</label>
-            <input type="text" id="txtCorreo" required>
-        </div>
-        <div>
-            <label for="txtContrasenna">Contraseña</label>
-            <input type="password" id="txtContrasenna" required>
-        </div>
-        <div>
-            <label for="txtConfirmacion">Confirmación</label>
-            <input type="password" id="txtConfirmacion" required>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="text-school">Registro de Personal y Alumnos</h2>
+            <a href="dashboard.html" class="btn btn-outline-secondary btn-sm">Volver</a>
         </div>
 
-        <div>
-            <label for="selRol">Rol del Usuario</label>
-            <select id="selRol" onchange="verificarRol()">
-                <option value="estudiante">Estudiante</option>
-                <option value="docente">Docente</option>
-                <option value="terapeuta">Terapeuta</option>
-                <option value="encargado">Encargado Legal</option>
-                <option value="admin">Administrador</option>
-            </select>
-        </div>
+        <div class="card card-shadow">
+            <div class="card-body p-4">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="txtNombre" class="form-label">Nombre completo</label>
+                            <input type="text" id="txtNombre" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="txtCorreo" class="form-label">Correo electrónico</label>
+                            <input type="email" id="txtCorreo" class="form-control" required>
+                        </div>
+                    </div>
 
-        <div id="divEstudianteCargo" style="display: none; margin-top: 10px; border: 1px solid #ccc; padding: 10px;">
-            <label><strong>Asignar Estudiante a Cargo:</strong></label>
-            <select id="selEstudianteCargo">
-                <option value="">-- Seleccione un estudiante --</option>
-            </select>
-            <small>Seleccione el estudiante del cual este usuario será responsable.</small>
-        </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="txtContrasenna" class="form-label">Contraseña</label>
+                            <input type="password" id="txtContrasenna" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="txtConfirmacion" class="form-label">Confirmar Contraseña</label>
+                            <input type="password" id="txtConfirmacion" class="form-control" required>
+                        </div>
+                    </div>
 
-        <button type="button" id="btnGuardar" style="margin-top: 20px;">Guardar Usuario</button>
-    </form>
+                    <div class="mb-3">
+                        <label for="selRol" class="form-label fw-bold">Rol del Usuario</label>
+                        <select id="selRol" class="form-select" onchange="verificarRol()">
+                            <option value="estudiante">Estudiante</option>
+                            <option value="docente">Docente</option>
+                            <option value="terapeuta">Terapeuta</option>
+                            <option value="encargado">Encargado Legal</option>
+                            <option value="admin">Administrador</option>
+                        </select>
+                    </div>
+
+                    <div id="divEstudianteCargo" class="alert alert-info" style="display: none;">
+                        <label class="form-label fw-bold">Asignar Estudiante a Cargo:</label>
+                        <select id="selEstudianteCargo" class="form-select">
+                            <option value="">-- Seleccione un estudiante --</option>
+                        </select>
+                        <div class="form-text">Seleccione el estudiante del cual este usuario será responsable.</div>
+                    </div>
+
+                    <div class="d-grid mt-4">
+                        <button type="button" id="btnGuardar" class="btn btn-school btn-lg">Guardar Usuario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./js/index.js"></script> </body>
+    <script src="./js/index.js"></script>
+</body>
 </html>

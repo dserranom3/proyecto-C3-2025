@@ -2,31 +2,47 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gestión de Programas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-  <header>
-    <h1>Gestión de Programas</h1>
-    <a href="dashboard.html">Volver</a>
-  </header>
-  <main>
-    <section>
-      <h2>Registrar Programa</h2>
-      <form id="formPrograma">
-        <label>Nombre del programa</label>
-        <input type="text" id="nombre" required>
-        <label>Descripción</label>
-        <textarea id="descripcion"></textarea>
-        <button type="submit">Guardar Programa</button>
-      </form>
-    </section>
-    <hr>
-    <section>
-      <h2>Programas Registrados</h2>
-      <div id="listaProgramas"></div>
-    </section>
-  </main>
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 text-school">Programas Educativos</h1>
+        <a href="dashboard.html" class="btn btn-outline-secondary btn-sm">Volver</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card card-shadow mb-4">
+                <div class="card-header bg-school text-white">
+                    Nuevo Programa
+                </div>
+                <div class="card-body">
+                    <form id="formPrograma">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" id="nombre" class="form-control" placeholder="Ej: Terapia de Lenguaje" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Descripción</label>
+                            <textarea id="descripcion" class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h4 class="mb-3">Programas Activos</h4>
+            <div id="listaProgramas" class="vstack gap-3">
+                </div>
+        </div>
+    </div>
+  </div>
   <script src="./js/programas.js"></script>
 </body>
 </html>

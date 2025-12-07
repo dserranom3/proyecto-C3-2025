@@ -2,32 +2,53 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Recuperar Contraseña</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
 </head>
-<body>
-    <div style="max-width: 400px; margin: 50px auto; text-align: center;">
-        <h1>Recuperar Acceso</h1>
-        <p>Ingrese su correo o cédula para recibir instrucciones.</p>
-        <form id="formRecuperar">
-            <input type="text" id="txtInput" placeholder="Correo" required style="margin-bottom: 20px;">
-            <button type="submit">Enviar Instrucciones</button>
-        </form>
-        <br>
-        <a href="login.html">Volver</a>
+<body class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card card-shadow text-center p-4">
+                    <h3 class="mb-3 text-school">Recuperar Acceso</h3>
+                    <p class="text-muted mb-4">Ingrese su correo o cédula registrada. El sistema enviará las instrucciones.</p>
+                    
+                    <form id="formRecuperar">
+                        <div class="mb-3 text-start">
+                            <label class="form-label">Correo electrónico</label>
+                            <input type="text" id="txtInput" class="form-control" required>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-school">Enviar Instrucciones</button>
+                            <a href="login.html" class="btn btn-link text-decoration-none text-muted">Cancelar y volver</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    <audio id="sonidoExito" src="https://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/pause.wav"></audio>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         document.getElementById("formRecuperar").addEventListener("submit", async function(e) {
             e.preventDefault();
             const correo = document.getElementById("txtInput").value;
-            const res = await fetch("http://localhost:3000/api/recuperar-contrasenna", {
+            const res = await fetch("/api/recuperar-contrasenna", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ correo })
             });
             const data = await res.json();
-            if (data.ok) Swal.fire('Enviado', data.msj, 'success');
+            if (data.ok) {
+                const audio = document.getElementById("sonidoExito");
+                audio.volume = 0.5;
+                audio.play().catch(e => {});
+                Swal.fire('Enviado', data.msj, 'success');
+            }
             else Swal.fire('Error', data.msj, 'error');
         });
     </script>
