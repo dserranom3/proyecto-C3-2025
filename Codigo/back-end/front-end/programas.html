@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Programas</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <header>
+    <h1>Gestión de Programas</h1>
+    <a href="dashboard.html">Volver</a>
+  </header>
+  <main>
+    <section>
+      <h2>Registrar Programa</h2>
+      <form id="formPrograma">
+        <label>Nombre del programa</label>
+        <input type="text" id="nombre" required>
+        <label>Descripción</label>
+        <textarea id="descripcion"></textarea>
+        <button type="submit">Guardar Programa</button>
+      </form>
+    </section>
+    <hr>
+    <section>
+      <h2>Programas Registrados</h2>
+      <div id="listaProgramas"></div>
+    </section>
+  </main>
+  <script src="./js/programas.js"></script>
+</body>
+</html>

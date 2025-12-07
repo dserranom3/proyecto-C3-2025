@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Iniciar Sesión - Hellen Keller</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <h1>Centro Hellen Keller</h1>
+  <h2>Iniciar Sesión</h2>
+
+  <form id="formLogin">
+    <div>
+      <label for="txtCorreo">Correo o cédula</label>
+      <input id="txtCorreo" type="text" required>
+    </div>
+    <div>
+      <label for="txtPass">Contraseña</label>
+      <input id="txtPass" type="password" required>
+    </div>
+    
+    <button type="submit">Entrar</button>
+
+    <div style="margin-top: 15px; text-align: center;">
+        <a href="recuperar.html" style="text-decoration: none; color: #3498db;">¿Olvidó su contraseña?</a>
+    </div>
+  </form>
+
+  <script src="./js/auth.js"></script>
+</body>
+</html>

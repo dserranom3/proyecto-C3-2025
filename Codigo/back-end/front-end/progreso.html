@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Progreso</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Registrar Progreso</h1>
+        <a href="dashboard.html">Volver</a>
+    </header>
+    <form id="formProgreso">
+        <div>
+            <label>Seleccione PEI (Plan Activo)</label>
+            <select id="selPEI" required></select>
+        </div>
+        <div>
+            <label for="txtObservacion">Observación / Avance</label>
+            <input type="text" id="txtObservacion" required>
+        </div>
+        <button type="button" id="btnGuardarProgreso">Guardar Reporte</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/progreso.js"></script>
+</body>
+</html>

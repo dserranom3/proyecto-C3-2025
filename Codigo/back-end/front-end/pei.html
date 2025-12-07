@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar PEI</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Planes Educativos (PEI)</h1>
+        <a href="dashboard.html">Volver</a>
+    </header>
+    <form>
+        <div>
+            <label>Seleccione estudiante</label>
+            <select id="selEstudiante" required></select>
+        </div>
+        <div>
+            <label>Seleccione programa</label>
+            <select id="selPrograma" required></select>
+        </div>
+        <div>
+            <label for="txtDescripcion">Descripción del objetivo</label>
+            <input type="text" id="txtDescripcion" required>
+        </div>
+        <button type="button" id="btnGuardarPEI">Guardar PEI</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/pei.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div style="max-width: 400px; margin: 50px auto; text-align: center;">
+        <h1>Recuperar Acceso</h1>
+        <p>Ingrese su correo o cédula para recibir instrucciones.</p>
+        <form id="formRecuperar">
+            <input type="text" id="txtInput" placeholder="Correo" required style="margin-bottom: 20px;">
+            <button type="submit">Enviar Instrucciones</button>
+        </form>
+        <br>
+        <a href="login.html">Volver</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById("formRecuperar").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const correo = document.getElementById("txtInput").value;
+            const res = await fetch("http://localhost:3000/api/recuperar-contrasenna", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ correo })
+            });
+            const data = await res.json();
+            if (data.ok) Swal.fire('Enviado', data.msj, 'success');
+            else Swal.fire('Error', data.msj, 'error');
+        });
+    </script>
+</body>
+</html>

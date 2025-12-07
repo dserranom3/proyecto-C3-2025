@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css"> <title>Registro de Usuarios</title>
+</head>
+<body>
+    <header>
+        <h1>Registro de Usuarios</h1>
+        <a href="dashboard.html">Volver al Dashboard</a>
+    </header>
+
+    <form>
+        <div>
+            <label for="txtNombre">Nombre completo</label>
+            <input type="text" id="txtNombre" required>
+        </div>
+        <div>
+            <label for="txtCorreo">Correo electrónico</label>
+            <input type="text" id="txtCorreo" required>
+        </div>
+        <div>
+            <label for="txtContrasenna">Contraseña</label>
+            <input type="password" id="txtContrasenna" required>
+        </div>
+        <div>
+            <label for="txtConfirmacion">Confirmación</label>
+            <input type="password" id="txtConfirmacion" required>
+        </div>
+
+        <div>
+            <label for="selRol">Rol del Usuario</label>
+            <select id="selRol" onchange="verificarRol()">
+                <option value="estudiante">Estudiante</option>
+                <option value="docente">Docente</option>
+                <option value="terapeuta">Terapeuta</option>
+                <option value="encargado">Encargado Legal</option>
+                <option value="admin">Administrador</option>
+            </select>
+        </div>
+
+        <div id="divEstudianteCargo" style="display: none; margin-top: 10px; border: 1px solid #ccc; padding: 10px;">
+            <label><strong>Asignar Estudiante a Cargo:</strong></label>
+            <select id="selEstudianteCargo">
+                <option value="">-- Seleccione un estudiante --</option>
+            </select>
+            <small>Seleccione el estudiante del cual este usuario será responsable.</small>
+        </div>
+
+        <button type="button" id="btnGuardar" style="margin-top: 20px;">Guardar Usuario</button>
+    </form>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/index.js"></script> </body>
+</html>
